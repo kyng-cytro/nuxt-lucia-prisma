@@ -8,6 +8,6 @@ export default eventHandler(async (event) => {
   appendHeader(
     event,
     "Set-Cookie",
-    lucia.createBlankSessionCookie().serialize()
+    lucia.createBlankSessionCookie().serialize(),
   );
 });

@@ -11,6 +11,7 @@ model User {
   id        String    @id
   username  String    @unique
   githubId  Int       @unique @map("github_id")
+  //NOTE: role should probably be an enum
   role      String    @default("user")
   sessions  Session[]
   createdAt DateTime  @default(now()) @map("created_at")
