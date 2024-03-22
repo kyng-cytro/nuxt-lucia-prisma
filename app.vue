@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <p class="text-red-500">hello</p>
-    <UButton icon="i-heroicons-trash" label="Hello There" />
+  <div class="min-h-screen bg-white dark:bg-slate-900">
+    <NuxtPage />
   </div>
 </template>
