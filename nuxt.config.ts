@@ -5,5 +5,10 @@ export default defineNuxtConfig({
   ui: {
     icons: ["heroicons"],
   },
+  runtimeConfig: {
+    github: {
+      clientId: "",
+      clientSecret: "",
+    },
+  },
 });
-
