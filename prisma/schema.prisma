@@ -11,6 +11,7 @@ model User {
   id        String    @id
   username  String    @unique
   githubId  Int       @unique @map("github_id")
+  role      String    @default("user")
   sessions  Session[]
   createdAt DateTime  @default(now()) @map("created_at")
   updatedAt DateTime  @default(now()) @updatedAt @map("updated_at")

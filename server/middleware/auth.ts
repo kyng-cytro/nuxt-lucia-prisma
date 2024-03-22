@@ -25,14 +25,14 @@ export default defineEventHandler(async (event) => {
     appendResponseHeader(
       event,
       "Set-Cookie",
-      lucia.createSessionCookie(session.id).serialize()
+      lucia.createSessionCookie(session.id).serialize(),
     );
   }
   if (!session) {
     appendResponseHeader(
       event,
       "Set-Cookie",
-      lucia.createBlankSessionCookie().serialize()
+      lucia.createBlankSessionCookie().serialize(),
     );
   }
   event.context.session = session;
