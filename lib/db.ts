@@ -1,8 +1,12 @@
+import { webcrypto } from "node:crypto";
 import { PrismaClient } from "@prisma/client";
 
 declare global {
   var prisma: PrismaClient | undefined;
 }
+
+// Webcrypto polyfill for Lucia
+globalThis.crypto = webcrypto as Crypto;
 
 export const prisma =
   global.prisma ||
