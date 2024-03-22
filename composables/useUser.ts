@@ -2,6 +2,7 @@ import type { User } from "lucia";
 
 export const useUser = () => {
   const user = useState<User | null>("user", () => null);
+  const loggedIn = user.value?.id ? true : false;
   const signIn = async () => {
     await navigateTo("/login/github/", { external: true });
   };
@@ -12,5 +13,5 @@ export const useUser = () => {
     await navigateTo("/login");
   };
 
-  return { user, signIn, logOut };
+  return { loggedIn, user, signIn, logOut };
 };
